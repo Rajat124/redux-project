@@ -1,5 +1,4 @@
-import { legacy_createStore } from "redux";
-
+// import { legacy_createStore } from "redux";
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const initialState = { counter: 0, showCounter: true };
@@ -52,6 +51,8 @@ const counterSlice = createSlice({
 // };
 
 // const store = legacy_createStore(counterSlice.reducer);
+
+export const counterAction = counterSlice.actions;
 
 const store = configureStore({
   reducer: counterSlice.reducer,
